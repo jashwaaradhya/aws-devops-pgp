@@ -1,4 +1,3 @@
 #!/bin/bash
 sudo apt-get update
-yes | sudo rm -r aws-devops-pgp/
-sudo mkdir aws-devops-pgp
+yes | sudo rm -r /home/ubuntu/aws-devops-pgp/
