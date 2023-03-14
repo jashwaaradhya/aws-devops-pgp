@@ -3,6 +3,8 @@ os: linux
 files:
   - source: .
     destination: /home/ubuntu/aws-devops-pgp/
+  - source: /pythonappy.service
+    destination: /lib/systemd/system/
 hooks:
   BeforeInstall:
     - location: /install_deps
