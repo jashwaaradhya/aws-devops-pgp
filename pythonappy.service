@@ -1,0 +1,11 @@
+[Unit]
+Description=My Python Service
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python3 /home/ubuntu/aws-devops-pgp/app.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
