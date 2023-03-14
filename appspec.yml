@@ -6,8 +6,5 @@ files:
 hooks:
   BeforeInstall:
     - location: /install_deps
-      timeout: 120
-      runas: root
-    - location: /start_ser
-      timeout: 120
+      timeout: 300
       runas: root
