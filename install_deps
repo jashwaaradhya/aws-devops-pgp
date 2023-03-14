@@ -8,3 +8,11 @@ then yes | sudo rm -r /home/ubuntu/aws-devops-pgp/
 else echo will not delete
 
 fi
+
+if (ls /lib/systemd/system/ | grep pythonappy.service)
+
+then yes | sudo rm /lib/systemd/system/pythonappy.service
+
+else echo will not delete
+
+fi
