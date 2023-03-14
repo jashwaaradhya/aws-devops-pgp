@@ -5,3 +5,7 @@ hooks:
     - location: /install_deps
       timeout: 300
       runas: root
+  AfterInstall:
+    - location: /start_ser
+      timeout: 300
+      runas: root
