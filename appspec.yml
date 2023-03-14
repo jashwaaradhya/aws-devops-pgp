@@ -1,0 +1,13 @@
+version: 0.0
+os: linux
+files:
+  - source: .
+    destination: /home/ubuntu/aws-devops-pgp/
+hooks:
+  BeforeInstall:
+    - location: /install_deps
+      timeout: 120
+      runas: root
+    - location: /start_ser
+      timeout: 120
+      runas: root
