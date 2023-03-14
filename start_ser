@@ -1,2 +1,11 @@
 #!/bin/bash
+
+if (ps -ef | grep app.py)
+
+then sudo pkill -f app.py
+
+else echo no python prcesses....
+
+fi
+
 sudo python3 /home/ubuntu/aws-devops-pgp/app.py
