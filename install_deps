@@ -1,3 +1,10 @@
 #!/bin/bash
 sudo apt-get update
-yes | sudo rm -r /home/ubuntu/aws-devops-pgp/
+
+if (ls /home/ubuntu | grep aws-devops-pgp)
+
+then yes | sudo rm -r /home/ubuntu/aws-devops-pgp/
+
+else echo will not delete
+
+fi
