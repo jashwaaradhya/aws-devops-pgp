@@ -1,11 +1,7 @@
 #!/bin/bash
 
-if (ps -ef | grep app.py)
+sudo systemctl daemon-reload
 
-then sudo pkill -f app.py
+sudo systemctl stop pythonappy.service
 
-else echo no python prcesses....
-
-fi
-
-sudo python3 /home/ubuntu/aws-devops-pgp/app.py
+sudo systemctl start pythonappy.service
