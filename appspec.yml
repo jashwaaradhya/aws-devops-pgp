@@ -7,23 +7,23 @@ files:
     destination: /lib/systemd/system/
 hooks:
   BeforeInstall:
-    - location: /install_deps
+    - location: /scripts/install_deps
       timeout: 300
       runas: root
   AfterInstall:
-    - location: /start_ser
+    - location: /scripts/start_ser
       timeout: 300
       runas: root
   AfterInstall:
-    - location: /install-docker-awscli-kubectl-eskctl
+    - location: /scripts/install-docker-awscli-kubectl-eskctl
       timeout: 300
       runas: root
   AfterInstall:
-    - location: /push-container
+    - location: /scripts/push-container
       timeout: 300
       runas: root
   AfterInstall:
-    - location: /setup-eks-cluster
+    - location: /scripts/setup-eks-cluster
       timeout: 300
       runas: root
       
