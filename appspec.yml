@@ -14,3 +14,16 @@ hooks:
     - location: /start_ser
       timeout: 300
       runas: root
+  AfterInstall:
+    - location: /install-docker-awscli-kubectl-eskctl.sh
+      timeout: 300
+      runas: root
+  AfterInstall:
+    - location: /push-container.sh
+      timeout: 300
+      runas: root
+  AfterInstall:
+    - location: /setup-eks-cluster.sh
+      timeout: 300
+      runas: root
+      
