@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if (eksctl get fargateprofile --cluster Final | grep Game2048)
+
+then
+echo Profile exists !
+
+kubectl apply -f capcustom.yaml
+
+
+else
+echo Creating fargate profile !
+
+eksctl create fargateprofile --cluster Final --region us-west-2 --name Game2048 --namespace game-2048
+
+kubectl apply -f capcustom.yaml
+fi
