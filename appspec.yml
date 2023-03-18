@@ -11,22 +11,6 @@ hooks:
       timeout: 300
       runas: root
   AfterInstall:
-    - location: /scripts/deploy-yaml
-      timeout: 300
-      runas: root
-  AfterInstall:
-    - location: /scripts/setup-eks-cluster
-      timeout: 300
-      runas: root     
-  AfterInstall:
-    - location: /scripts/push-container
-      timeout: 300
-      runas: root      
-  AfterInstall:
-    - location: /scripts/install-docker-awscli-kubectl-eskctl
-      timeout: 300
-      runas: root  
-  AfterInstall:
     - location: /scripts/start_ser
       timeout: 300
       runas: root
